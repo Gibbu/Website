@@ -48,10 +48,9 @@
       const formData = new FormData();
       formData.append('image', file);
 
-      const {data} = await axios.post('https://api.imgur.com/3/upload', formData, {
+      const {data} = await axios.post('https://api.imgur.com/3/image', formData, {
         headers: {
-          Authorization: 'Client-ID 52c59e859f41ce2',
-          'Access-Control-Allow-Origin': '*'
+          Authorization: 'Client-ID 52c59e859f41ce2'
         },
         onUploadProgress(e) {
           fileUploadProgress = e.lengthComputable ? (e.loaded / e.total) * 100 : 0;
