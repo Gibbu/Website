@@ -23,6 +23,7 @@
   import Button from '$lib/components/Button.svelte';
   import Component from '$lib/editor/Component.svelte';
   import Addons from '$lib/editor/Addons.svelte';
+  import Loader from '$lib/editor/Loader.svelte';
 
   const themes: ITheme[] = JSON.parse(JSON.stringify(themesData));
   const addon: IAddon[] = JSON.parse(JSON.stringify(addonsData));
@@ -64,7 +65,7 @@
 	<meta property="og:description" content="Customize {setTheme.name} with a easy to use interface">
 </svelte:head>
 
-<div class="h-screen w-screen overflow-hidden flex">
+<div class="h-screen w-screen overflow-hidden flex relative z-10">
   <aside class="bg-gray-800 w-[400px] min-w-[400px] h-full flex flex-col">
     <Actions />
     <div class="scroller-container">
@@ -110,3 +111,5 @@
   </aside>
   <Preview url={setTheme.preview} developers={setTheme.developers} />
 </div>
+
+<Loader />

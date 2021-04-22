@@ -1,8 +1,7 @@
 <script>
-  import {loaded, preview, THEME} from '$lib/stores';
+  import {loaded, preview} from '$lib/stores';
 
   import type {IDev} from '$lib/interfaces/dev';
-
 
   export let developers: IDev[];
   export let url: string;

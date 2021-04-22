@@ -131,11 +131,11 @@
   <section class="px-4 pb-4">
     {#if fileUploadProgress === 0 || fileUploadProgress === 100}
     <div class="flex">
-        <label class="flex flex-1 justify-center items-center border-2 rounded p-4 mr-4 {uploadType === 'imgur' ? 'border-emerald-500' : 'border-gray-700'}">
+        <label class="flex flex-1 cursor-pointer justify-center items-center border-2 rounded p-4 mr-4 {uploadType === 'imgur' ? 'border-emerald-500' : 'border-gray-700'}">
           <input type="radio" bind:group={uploadType} value="imgur" class="mr-2 w-5 h-5 border-0 text-emerald-500 focus:ring-emerald-500 focus:ring-offset-gray-800">
           Imgur.com
         </label>
-        <label class="flex flex-1 justify-center items-center border-2 rounded p-4 {uploadType === 'b64' ? 'border-emerald-500' : 'border-gray-700'}">
+        <label class="flex flex-1 cursor-pointer justify-center items-center border-2 rounded p-4 {uploadType === 'b64' ? 'border-emerald-500' : 'border-gray-700'}">
           <input type="radio" bind:group={uploadType} value="b64" class="mr-2 w-5 h-5 border-0 text-emerald-500 focus:ring-emerald-500 focus:ring-offset-gray-800">
           Inline encode (base64)
         </label>
@@ -155,7 +155,7 @@
           <small class="text-xs text-gray-400">{fileUploadProgress.toFixed(2)}%</small>
         </div>
         <div class="bg-gray-700 rounded-lg h-4 overflow-hidden">
-          <div class="h-full bg-emerald-500 rounded-lg" style="width: {fileUploadProgress.toFixed(2)}%"></div>
+          <div class="h-full bg-emerald-500 rounded-lg transition-all" style="width: {fileUploadProgress.toFixed(2)}%"></div>
         </div>
       </div>  
     {/if}

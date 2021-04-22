@@ -37,9 +37,15 @@
         <img src={theme.image} alt="Theme preview">
       </a>
       <div class="ml-6 flex-1">
-        <h2 class="text-white font-display text-xl mb-4">
+        <h2 class="text-white font-display text-xl">
           <a href={getHref(theme.name)} class="hover:underline hover:text-emerald-500">{theme.name}</a>
         </h2>
+        <p class="text-sm text-gray-400 mb-4">
+          by
+          {#each theme.developers as dev}
+            <a href="https://github.com/{dev.github}" target="_blank" class="underline">{dev.name}</a>
+          {/each}
+        </p>
         <p>{theme.meta.description}</p>
         {#if theme.features.length > 0}
           <div class="flex items-center text-sm mt-2">
