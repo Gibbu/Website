@@ -11,29 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 		
 
+		
 
-
-<link rel="modulepreload" href="/./_app/start-a308f8e4.js">
-			<link rel="modulepreload" href="/./_app/chunks/index-d6d64123.js">
-			<link rel="modulepreload" href="/./_app/chunks/singletons-af1a8bd8.js">
-			<link rel="modulepreload" href="/./_app/chunks/index-9f1656b7.js">
-			<link rel="modulepreload" href="/./_app/pages\index.svelte-7b7079df.js">
-			<link rel="stylesheet" href="/./_app/assets/start-e4b94a17.css">
-
+		<link rel="modulepreload" href="/Website/_app/start-90904c65.js">
+		<link rel="modulepreload" href="/Website/_app/chunks/index-391bbebd.js">
+		<link rel="modulepreload" href="/Website/_app/chunks/singletons-af1a8bd8.js">
+		<link rel="modulepreload" href="/Website/_app/chunks/index-4b0534e8.js">
+		<link rel="modulepreload" href="/Website/_app/pages/$layout.svelte-1206a578.js">
+		<link rel="modulepreload" href="/Website/_app/pages/index.svelte-8d2cd6d1.js">
+		<link rel="stylesheet" href="/Website/_app/assets/start-b97461fb.css">
+		<link rel="stylesheet" href="/Website/_app/assets/pages/$layout.svelte-c0991197.css">
 
 		<script type="module">
-			import { start } from "/./_app/start-a308f8e4.js";
+			import { start } from "/Website/_app/start-90904c65.js";
 			start({
 				target: document.querySelector("#svelte"),
-				paths: {"base":"","assets":"/."},
+				paths: {"base":"/Website","assets":"/Website"},
 				session: {},
 				host: location.host,
 				route: true,
+				spa: false,
 				hydrate: {
 					status: 200,
 					error: null,
 					nodes: [
-						import("/./_app/pages\\index.svelte-7b7079df.js")
+						import("/Website/_app/pages/$layout.svelte-1206a578.js"),
+						import("/Website/_app/pages/index.svelte-8d2cd6d1.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
