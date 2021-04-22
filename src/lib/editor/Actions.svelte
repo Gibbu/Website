@@ -15,7 +15,7 @@
 
   let value = '';
   let error = '';
-  
+
   let backModal = false;
   let donateModal = false;
 
@@ -57,6 +57,8 @@
       if ($THEME.hiddenVars) save += vars($THEME.hiddenVars, 'hidden');
       save += vars($THEME.addons, 'addon');
       save += '}';
+
+      console.log(save);
 
       let file = new Blob([save], {type: 'text/plain;charset=utf-8'});
       FileSaver.saveAs(file, `${value}.theme.css`);
@@ -118,7 +120,6 @@
 
       // // Check if imported theme is allowed based off @source meta field
       const source = between(result, '/**', '*/').split('\n').find(el => el.includes('source')).split(' ').pop();
-      console.log(source);
       if ($THEME.meta.source !== source) {
         error = `That theme file is not compatible. Only themes with the base of ${$THEME.name} can be imported.`;
         return false;
@@ -159,9 +160,12 @@
         await tick();
 
         // Set checkboxes
-        const checkbox = document.querySelector(`.checkbox-input[value="${selector}"`) as HTMLInputElement;
+        const checkbox = document.querySelector(`input[type="checkbox"][value="${selector}"`) as HTMLInputElement;
+        const addonBody = checkbox.closest('header').nextElementSibling;
+
+        addonBody.classList.remove('hidden');
+        addonBody.classList.add('block');
         checkbox.checked = true;
-        checkbox.closest('.addon').children[1].classList.add('active');
 
         // Insert addon into previewer
         const styleTag = document.createElement('style');
