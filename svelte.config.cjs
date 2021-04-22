@@ -18,8 +18,8 @@ module.exports = {
 		adapter: adapter(),
 		target: '#svelte',
 		paths: {
-			assets: '/',
-			base: '/'
+			assets: '/Website',
+			base: '/Website'
 		},
 		vite: {
 			optimizeDeps: {
