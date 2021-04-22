@@ -17,10 +17,6 @@ module.exports = {
 	kit: {
 		adapter: adapter(),
 		target: '#svelte',
-		paths: {
-			assets: '/Website',
-			base: '/Website'
-		},
 		vite: {
 			optimizeDeps: {
 				include: ['svelte-hero-icons']
