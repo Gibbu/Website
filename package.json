@@ -30,6 +30,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-hero-icons": "^2.1.1"
+		"svelte-hero-icons": "^2.2.0"
 	}
 }

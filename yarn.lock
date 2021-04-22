@@ -1936,10 +1936,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-hero-icons@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/svelte-hero-icons/-/svelte-hero-icons-2.1.1.tgz#e5b9cc86acc079f0540ca2d8769aa3cff380770d"
-  integrity sha512-QDJ2lfvl5XtvTJHu7GSm0RISQ111/mQyGhad7qz6m2EkP5Kg1/k4xQkfSzBvCAVM7nr/sIyty6ph4wkD8RN+WA==
+svelte-hero-icons@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/svelte-hero-icons/-/svelte-hero-icons-2.2.0.tgz#3e505a19ce858f3584e0443c438fc20187350737"
+  integrity sha512-JFoHwMBptg0Bu07DMTJGu7dHk+vkByvMUpmIIOT0cufg9g+NXu+lJ7pUYKGgS3hzl6wfsFuPuu/zMW/+JJOqjw==
 
 svelte-hmr@^0.13.3:
   version "0.13.3"
