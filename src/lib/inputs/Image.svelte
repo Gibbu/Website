@@ -129,7 +129,7 @@
     <h2 class="font-display text-xl text-white">How should we upload?</h2>
   </header>
   <section class="px-4 pb-4">
-    {#if fileUploadProgress === 0}
+    {#if fileUploadProgress === 0 || fileUploadProgress === 100}
     <div class="flex">
         <label class="flex flex-1 justify-center items-center border-2 rounded p-4 mr-4 {uploadType === 'imgur' ? 'border-emerald-500' : 'border-gray-700'}">
           <input type="radio" bind:group={uploadType} value="imgur" class="mr-2 w-5 h-5 border-0 text-emerald-500 focus:ring-emerald-500 focus:ring-offset-gray-800">
@@ -140,29 +140,31 @@
           Inline encode (base64)
         </label>
       </div>
+      <div class="fileType-info">
+        {#if uploadType === 'imgur'}
+          <p class="my-4">Uploading to Imgur will make the theme less laggy but will mean your image will be public for everyone.</p>
+        {:else if uploadType === 'b64'}
+          <p class="my-4">Inline encoding with Base64 means your image will be private as it's encoded directly in your theme file, but will create more lag for big images.</p>
+        {/if}
+      </div>
     {/if}
-    <div class="fileType-info">
-      {#if uploadType === 'imgur'}
-        <p class="my-4">Uploading to Imgur will make the theme less laggy but will mean your image will be public for everyone.</p>
-      {:else if uploadType === 'b64'}
-        <p class="my-4">Inline encoding with Base64 means your image will be private as it's encoded directly in your theme file, but will create more lag for big images.</p>
-      {/if}
-    </div>
     {#if uploadType === 'imgur' && fileUploadProgress > 0}
-      <div class="progress">
-        <div class="progress-text">
-          <small class="progress-status">{fileUploadProgress != 100 ? 'Uploading...' : 'Upload complete'}</small>
-          <small class="progress-percentage">{fileUploadProgress.toFixed(2)}%</small>
+      <div class="relative my-4">
+        <div class="flex items-center justify-between mb-1">
+          <small class="text-xs text-gray-400">{fileUploadProgress != 100 ? 'Uploading...' : 'Upload complete'}</small>
+          <small class="text-xs text-gray-400">{fileUploadProgress.toFixed(2)}%</small>
         </div>
-        <div class="progress-bar">
-          <div class="progress-bar-inner" style="width: {fileUploadProgress.toFixed(2)}%"></div>
+        <div class="bg-gray-700 rounded-lg h-4 overflow-hidden">
+          <div class="h-full bg-emerald-500 rounded-lg" style="width: {fileUploadProgress.toFixed(2)}%"></div>
         </div>
       </div>  
     {/if}
-    <div class="flex text-sm items-center font-semibold transition rounded justify-center py-3 px-4 cursor-pointer bg-gray-700 text-gray-300 hover:bg-gray-600 focus:outline-none focus:bg-gray-500 focus:text-white" on:click={() => fileInput.click()}>
-      <input type="file" bind:files on:change={file} bind:this={fileInput} class="hidden">
-      <Icon src={Document} size="24" class="mr-2" />
-      <span class="text-md text-white font-medium">{fileInputName || 'Select a file...'}</span>
-    </div>
+    {#if fileUploadProgress === 0 || fileUploadProgress === 100}
+      <div class="flex text-sm items-center font-semibold transition rounded justify-center py-3 px-4 cursor-pointer bg-gray-700 text-gray-300 hover:bg-gray-600 focus:outline-none focus:bg-gray-500 focus:text-white" on:click={() => fileInput.click()}>
+        <input type="file" bind:files on:change={file} bind:this={fileInput} class="hidden">
+        <Icon src={Document} size="24" class="mr-2" />
+        <span class="text-md text-white font-medium">{fileInputName || 'Select a file...'}</span>
+      </div>
+    {/if}
   </section>
 </Modal>
