@@ -48,7 +48,7 @@
   </button>
   {#if visible}
     <div
-      class="border-emerald-500 bg-gray-900 transform translate-y-2 absolute z-10 top-full border-2 rounded p-2"
+      class="border-emerald-500 bg-gray-900 transform translate-y-2 absolute z-10 top-full border-2 rounded p-2 w-full"
       use:clickOutside={trigger}
       on:clickedOutside={hide}
     >

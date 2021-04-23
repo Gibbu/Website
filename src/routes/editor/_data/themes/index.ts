@@ -4,6 +4,7 @@ import clearvision from './clearvision';
 import notanotheranimetheme from './notanotheranimetheme';
 import reborn from './reborn';
 import tranquil from './tranquil';
+import discordrecolor from './discordrecolor';
 import minimalcord from './minimalcord';
 
 export default [
@@ -13,5 +14,6 @@ export default [
   notanotheranimetheme,
   reborn,
   tranquil,
+  discordrecolor,
   minimalcord,
 ]
