@@ -25,9 +25,10 @@
     const output = font.map(font => `'${font}'`);
 
     if (!value.includes('Whitney') && !local) {
-      let fontUrl = `@import url('https://fonts.googleapis.com/css2?family=${font[0].replace(/ /g, '+')}:wght@100;300;400;500;700&display=swap')`;
+      const url = `https://fonts.googleapis.com/css2?family=${font[0].replace(/ /g, '+')}:wght@100;300;400;500;700&display=swap`;
+      const fontUrl = `@import url('${url}')`;
 
-      $THEME.fonts[index] = fontUrl;
+      $THEME.fonts[index] = url;
 
       if (!$preview.querySelector(`#font-${index}`)) {
         let style = document.createElement('style');

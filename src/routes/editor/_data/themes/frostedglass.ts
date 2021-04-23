@@ -393,6 +393,12 @@ const theme: ITheme = {
       ]
     }
   ],
+  hiddenVars: [
+    {
+      variable: 'update-notice-1',
+      value: 'none'
+    }
+  ],
   addons: ['rs', 'columns', 'hsl']
 }
 

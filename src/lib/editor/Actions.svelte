@@ -58,8 +58,6 @@
       save += vars($THEME.addons, 'addon');
       save += '}';
 
-      console.log(save);
-
       let file = new Blob([save], {type: 'text/plain;charset=utf-8'});
       FileSaver.saveAs(file, `${value}.theme.css`);
 
