@@ -1,8 +1,7 @@
 <script>
-  import Icon, {ArrowRight, InformationCircle} from 'svelte-hero-icons';
+  import Icon, {ArrowRight} from 'svelte-hero-icons';
   import {onMount} from 'svelte';
   import {loaded} from '$lib/stores';
-  import tooltip from '$lib/directives/tooltip';
 
   import themes from './_data/themes';
 
@@ -27,9 +26,6 @@
 <main class="max-w-screen-xl mx-auto w-full">
   <header class="my-16 flex justify-between">
     <h1 class="font-display text-white text-4xl">Select a theme to customize</h1>
-    <!-- <button class="rounded-full focus:outline-none hover:text-white" use:tooltip={{content: 'Feature info'}}>
-      <Icon src={InformationCircle} size="24" />
-    </button> -->
   </header>
   {#each themes as theme}
     <div class="flex mb-6 pb-6 border-b border-gray-800 last:border-none">

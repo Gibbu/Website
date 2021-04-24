@@ -39,6 +39,7 @@
     imports: setTheme.imports,
     fonts: setTheme.fonts,
     variables: setTheme.variables,
+    hiddenVars: setTheme.hiddenVars,
     addons: setAddons
   }
 
