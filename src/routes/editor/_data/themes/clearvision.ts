@@ -96,7 +96,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'background-position',
 						value: 'center',
@@ -115,7 +115,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'background-size',
 						value: 'cover',
@@ -131,7 +131,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'background-repeat',
             customValue: false,
@@ -144,7 +144,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'background-attachment',
             customValue: false,
@@ -252,7 +252,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-popout-position',
 						value: 'center',
@@ -271,7 +271,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-popout-size',
 						value: 'cover',
@@ -287,7 +287,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-popout-repeat',
             customValue: false,
@@ -300,7 +300,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-popout-attachment',
             customValue: false,
@@ -398,7 +398,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-modal-position',
 						value: 'center',
@@ -417,7 +417,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-modal-size',
 						value: 'cover',
@@ -433,7 +433,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-modal-repeat',
             customValue: false,
@@ -446,7 +446,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'user-modal-attachment',
             customValue: false,
@@ -543,7 +543,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'home-position',
 						value: 'center',

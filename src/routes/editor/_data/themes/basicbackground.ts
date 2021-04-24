@@ -37,7 +37,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'backgroundsize',
             value: 'cover',
@@ -79,7 +79,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'popoutsize',
             value: 'var(--backgroundsize)',

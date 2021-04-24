@@ -58,7 +58,7 @@ const theme: ITheme = {
           }
         },
         {
-          type: 'select',
+          type: 'options',
           details: {
             variable: 'friends-icon-position',
             value: 'center',
