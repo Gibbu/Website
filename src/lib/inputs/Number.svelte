@@ -25,7 +25,7 @@
     } else {
       error = '';
       $preview.style.setProperty(`--${variable}`, value+unit);
-      dispatch('update', {variable, value, addon});
+      dispatch('update', {variable, value: value+unit, addon});
     }
   }
 </script>
