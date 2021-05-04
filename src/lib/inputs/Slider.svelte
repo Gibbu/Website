@@ -1,5 +1,4 @@
 <script>
-  import {preview} from '../stores';
   import Icon, {SwitchHorizontal} from 'svelte-hero-icons';
   import {createEventDispatcher} from 'svelte';
   import tooltip from '../directives/tooltip';
@@ -21,7 +20,6 @@
   let switchType = false;
 
   const update = () => {
-    $preview.style.setProperty(`--${variable}`, value+unit)
     dispatch('update', {variable, addon, value, unit});
   }
 

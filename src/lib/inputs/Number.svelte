@@ -1,5 +1,4 @@
 <script>
-  import {preview} from '../stores';
 	import {createEventDispatcher} from 'svelte';
   const dispatch = createEventDispatcher();
 
@@ -24,8 +23,7 @@
       error = 'This input field can only contain numbers.';
     } else {
       error = '';
-      $preview.style.setProperty(`--${variable}`, value+unit);
-      dispatch('update', {variable, value: value+unit, addon});
+      dispatch('update', {variable, value, addon, unit});
     }
   }
 </script>

@@ -1,6 +1,5 @@
 <script>
   import {tick} from 'svelte';
-  import {preview} from '$lib/stores';
 	import {createEventDispatcher, onMount, onDestroy} from 'svelte';
   import '@simonwep/pickr/dist/themes/monolith.min.css';
 
@@ -89,7 +88,6 @@
           output = `${(rule ? `rgb(`: '')}${rd(c[0])},${rd(c[1])},${rd(c[2])}${alpha ? `,${c[3]}` : ''}${(rule ? ')': '')}`;
         }
 
-        $preview.style.setProperty(`--${variable}`, output);
         dispatch('update', {variable, addon, value: output});
       })
     }

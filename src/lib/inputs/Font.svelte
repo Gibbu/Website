@@ -42,7 +42,6 @@
     }
     if (value.length > 0) {
       dispatch('update', {variable, "value": output.join(',')})
-      $preview.style.setProperty(`--${variable}`, output.join(','));
     }
   }
 </script>

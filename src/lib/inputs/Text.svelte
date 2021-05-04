@@ -1,5 +1,4 @@
 <script>
-  import {preview} from '../stores';
 	import {createEventDispatcher} from 'svelte';
   const dispatch = createEventDispatcher();
   
@@ -13,8 +12,7 @@
   export let hint: string;
 
   const update = () => {
-    $preview.style.setProperty(`--${variable}`, value);
-    dispatch('update', {variable, value: value, addon});
+    dispatch('update', {variable, value, addon});
   }
 </script>
 
