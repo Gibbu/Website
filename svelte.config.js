@@ -1,9 +1,8 @@
-const sveltePreprocess = require('svelte-preprocess');
-const adapter = require('@sveltejs/adapter-static');
-const pkg = require('./package.json');
+import sveltePreprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
-module.exports = {
+const config = {
 	extensions: [".svelte"],
 	preprocess: [
 		sveltePreprocess({
@@ -20,10 +19,9 @@ module.exports = {
 		vite: {
 			optimizeDeps: {
 				include: ['svelte-hero-icons']
-			},
-			ssr: {
-				noExternal: Object.keys(pkg.dependencies || {})
 			}
 		}
 	}
 };
+
+export default config;
