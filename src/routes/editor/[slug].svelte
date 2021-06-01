@@ -110,7 +110,7 @@
       {/if}
     </div>
   </aside>
-  <Preview url={setTheme.preview} developers={setTheme.developers} />
+  <Preview url={setTheme.preview} />
 </div>
 
 <Loader />

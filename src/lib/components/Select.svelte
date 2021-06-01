@@ -12,7 +12,7 @@
 
   // Props
   export let options: IOption[];
-  export let value: string;
+  export let value: string = '';
   export let customValue = true;
 
   // Values

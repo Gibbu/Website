@@ -1,14 +1,14 @@
 <script>
   export let type: 'button' | 'submit' = 'button';
   export let variant: 'primary' | 'secondary' | 'text' = 'primary';
-  export let colour: 'emerald' | 'green' | 'yellow' | 'red';
+  export let colour: 'emerald' | 'green' | 'yellow' | 'red' = 'emerald';
 
   export let element: 'button' | 'a' = 'button';
-  export let href: string;
+  export let href: string = '';
 
-  export let disabled: any;
+  export let disabled: any = undefined;
 
-  let className: string;
+  let className: string = '';
   export {className as class}
 
   const disabledClasses = 'opacity-50 pointer-events-none';

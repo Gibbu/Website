@@ -1,9 +1,6 @@
 <script>
   import {loaded, preview} from '$lib/stores';
 
-  import type {IDev} from '$lib/interfaces/dev';
-
-  export let developers: IDev[];
   export let url: string;
 
   let iframe: any;
@@ -13,7 +10,6 @@
 
     $preview = getIframe;
     getIframe.querySelector('#import').textContent = `@import url("${url}")`;
-    iframe.contentWindow.update(developers[0])
 
     $loaded = true;
   }

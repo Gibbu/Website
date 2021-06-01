@@ -13,7 +13,7 @@
   export let title: string;
 
   // Optional input vars
-  export let hint: string;
+  export let hint: string = '';
   export let customValue = true;
   export let addon = false;
 

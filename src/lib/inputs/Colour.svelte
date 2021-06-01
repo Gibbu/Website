@@ -13,7 +13,7 @@
   export let addon = false;
   export let rule = false;
   export let alpha = false;
-  export let hint: string;
+  export let hint: string = '';
 
   // Pickr stuff
   let PickrModule;

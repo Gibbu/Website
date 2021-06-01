@@ -15,7 +15,7 @@
   export let step = 1;
   export let min = 0;
   export let addon = false;
-  export let hint: string;
+  export let hint: string = '';
 
   let switchType = false;
 
