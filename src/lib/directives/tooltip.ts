@@ -1,7 +1,7 @@
 import tippy from 'tippy.js';
 import 'tippy.js/animations/shift-away-subtle.css';
 
-export default function (node, props) {
+export default function (node: Element, props) {
   tippy(node, {
     allowHTML: true,
     placement: 'top',

@@ -9,9 +9,7 @@ module.exports = {
 		],
 		options: {
 			defaultExtractor: (content) => [
-				// If this stops working, please open an issue at https://github.com/svelte-add/tailwindcss/issues rather than bothering Tailwind Labs about it
 				...tailwindExtractor(content),
-				// Match Svelte class: directives (https://github.com/tailwindlabs/tailwindcss/discussions/1731)
 				...[...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group),
 			],
 			keyframes: true,
@@ -20,7 +18,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			'display': ['Montserrat', 'sans-serif'],
-      'body': ['Inter', 'Open Sans', 'Roboto', 'sans-serif']
+			'body': ['Inter', 'Open Sans', 'Roboto', 'sans-serif']
 		},
 		extend: {
 			colors: {

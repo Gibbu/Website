@@ -8,12 +8,12 @@ import discordrecolor from './discordrecolor';
 import minimalcord from './minimalcord';
 
 export default [
-  frostedglass,
-  basicbackground,
-  clearvision,
-  notanotheranimetheme,
-  reborn,
-  tranquil,
-  discordrecolor,
-  minimalcord,
+	frostedglass,
+	basicbackground,
+	clearvision,
+	notanotheranimetheme,
+	reborn,
+	tranquil,
+	discordrecolor,
+	minimalcord,
 ]
