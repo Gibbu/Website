@@ -1,5 +1,6 @@
 import sveltePreprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
+import {resolve} from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -19,6 +20,13 @@ const config = {
 		vite: {
 			optimizeDeps: {
 				include: ['svelte-hero-icons']
+			},
+			resolve: {
+				alias: {
+					'$interfaces': resolve('./src/interfaces'),
+					'$components': resolve('./src/components'),
+					'$data': resolve('./src/data')
+				}
 			}
 		}
 	}
