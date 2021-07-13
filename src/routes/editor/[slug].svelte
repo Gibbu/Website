@@ -59,7 +59,7 @@
 	<meta property="og:description" content="Customize {setTheme.name} with a easy to use interface">
 </svelte:head>
 
-<!-- <Loader /> -->
+<Loader />
 
 <div class="h-screen w-screen overflow-hidden flex relative z-10">
 	<aside class="bg-gray-800 w-[400px] min-w-[400px] h-full flex flex-col">
