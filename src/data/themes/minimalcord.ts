@@ -3,7 +3,7 @@ import Gibbu from '$data/devs/gibbu';
 
 const theme: ITheme = {
 	name: 'MinimalCord',
-	preview: 'https://discordstyles.github.io/MinimalCord/MinimalCord.theme.css',
+	preview: 'https://discordstyles.github.io/MinimalCord/dist/MinimalCord.theme.css',
 	image: 'https://camo.githubusercontent.com/e9a46ff5510743194cef44df2f4ba72978d690f327d0eb039cef092833b99f7a/68747470733a2f2f692e696d6775722e636f6d2f57333364674d4a2e706e67',
 	developers: [Gibbu],
 	meta: {
@@ -18,7 +18,7 @@ const theme: ITheme = {
 		source: 'https://github.com/monstrousdev/themes/theme-files/Reborn.theme.css'
 	},
 	imports: [
-		'https://discordstyles.github.io/MinimalCord/base.css'
+		'https://discordstyles.github.io/MinimalCord/dist/MinimalCord.css'
 	],
 	fonts: [],
 	variables: [
