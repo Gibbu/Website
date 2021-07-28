@@ -9,11 +9,11 @@ const theme: ITheme = {
 	meta: {
 		name: 'ClearVision',
 		author: 'ClearVision Team',
-		version: '6',
+		version: '6.1.1',
 		description: 'Highly customizable and beautiful theme for BetterDiscord',
 		source: 'https://github.com/ClearVision/ClearVision-v6',
 		website: 'https://clearvision.gitlab.io',
-		invite: '2fKpjAR'
+		invite: 'dHaSxn3'
 	},
 	imports: ['https://clearvision.gitlab.io/v6/main.css'],
 	fonts: [],
