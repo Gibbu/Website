@@ -1,1 +1,1 @@
-Personal website, also used for [BetterDiscord Theme Editor](https://gibbu.me/editor).
+The best website.

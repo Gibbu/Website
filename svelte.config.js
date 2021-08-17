@@ -1,21 +1,21 @@
-import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
-import {resolve} from 'path';
+import preprocess from 'svelte-preprocess';
+import autoprefixer from 'autoprefixer';
+import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: [".svelte"],
-	preprocess: [
-		sveltePreprocess({
+    preprocess: preprocess({
 			defaults: {
-				script: 'typescript',
-				style: "postcss",
+				script: 'typescript'
 			},
-			postcss: true
+			scss: {
+				prependData: `@use 'src/scss/functions.scss' as *;`
+			},
+			postcss: {
+				plugins: [autoprefixer()]
+			}
 		}),
-	],
-	kit: {
-		adapter: adapter(),
+    kit: {
 		target: '#svelte',
 		vite: {
 			optimizeDeps: {
@@ -23,9 +23,8 @@ const config = {
 			},
 			resolve: {
 				alias: {
-					'$interfaces': resolve('./src/interfaces'),
-					'$components': resolve('./src/components'),
-					'$data': resolve('./src/data')
+					'$components': path.resolve('./src/components'),
+					'$scss': path.resolve('./src/scss')
 				}
 			}
 		}
