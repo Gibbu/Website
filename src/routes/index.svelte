@@ -27,7 +27,8 @@
 			type: 'theme',
 			description: 'Display your picture of choice with adjustable blur and brightness.',
 			tags: ['Customizable', 'Nature'],
-			thumbnail: 'https://camo.githubusercontent.com/1147af61520b0f333fbb7e2de84bc24853a651033a50a8c314a34b8c6c58e8b4/68747470733a2f2f692e696d6775722e636f6d2f4772384a4a41762e6a7067'
+			thumbnail: 'https://camo.githubusercontent.com/1147af61520b0f333fbb7e2de84bc24853a651033a50a8c314a34b8c6c58e8b4/68747470733a2f2f692e696d6775722e636f6d2f4772384a4a41762e6a7067',
+			download: 'https://betterdiscord.app/Download?id=40'
 		},
 		{
 			name: 'MinimalCord',
@@ -42,7 +43,8 @@
 			type: 'theme',
 			description: 'A sharp and simple theme for Discord.',
 			tags: ['Dark', 'Flat', 'Customizable'],
-			thumbnail: 'https://camo.githubusercontent.com/aa95a005d789b884b497f709f7b0c4abf78eeecf8319db4c6fe7860412c85a26/68747470733a2f2f692e696d6775722e636f6d2f544154784a39732e706e67'
+			thumbnail: 'https://camo.githubusercontent.com/aa95a005d789b884b497f709f7b0c4abf78eeecf8319db4c6fe7860412c85a26/68747470733a2f2f692e696d6775722e636f6d2f544154784a39732e706e67',
+			download: 'https://betterdiscord.app/Download?id=394'
 		},
 		{
 			name: 'RadialStatus',
