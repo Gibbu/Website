@@ -29,7 +29,7 @@
 
 <template>
 	<div class="container">
-		<h1>{theme} has been moved.</h1>
+		<h1>{theme.name} has been moved.</h1>
 		<p>You can find the newest and betterer editor over at <a href="https://bdeditor.dev/theme/{url}" class="anchor" target="_blank" rel="noreferrer">https://bdeditor.dev/theme/{url}</a></p>
 	</div>
 </template>
