@@ -5,9 +5,6 @@ import path from 'path';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     preprocess: preprocess({
-			defaults: {
-				script: 'typescript'
-			},
 			scss: {
 				prependData: `@use 'src/scss/functions.scss' as *;`
 			},

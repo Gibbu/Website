@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Icon, {ColorSwatch, Code, Download, ExternalLink} from 'svelte-hero-icons';
 	import tooltip from '$lib/tooltip';
 
