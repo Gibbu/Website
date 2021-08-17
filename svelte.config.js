@@ -14,6 +14,9 @@ const config = {
 		}
 	}),
 	kit: {
+		paths: {
+			base: '/website'
+		},
 		adapter: adapter(),
 		target: '#svelte',
 		vite: {
