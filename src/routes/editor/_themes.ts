@@ -1,0 +1,1 @@
+export default ['frostedglass', 'basicbackground', 'clearvision', 'notanotheranimetheme', 'reborn', 'tranquil', 'discordrecolor']
