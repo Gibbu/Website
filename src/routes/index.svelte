@@ -52,7 +52,7 @@
 			description: 'Changes the status icons to wrap around the avatar.',
 			tags: ['Addon'],
 			thumbnail: 'https://camo.githubusercontent.com/cd5295a515e0a3a3d41e67c96ba884639c8d0c0a275f10340d8c681eac9ddee5/68747470733a2f2f692e696d6775722e636f6d2f347a5a553469772e6a7067',
-			download: 'https://betterdiscord.app/Download?id=394'
+			download: 'https://betterdiscord.app/Download?id=32'
 		},
 		{
 			name: 'Horizontal Server List',
