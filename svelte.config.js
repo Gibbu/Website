@@ -14,6 +14,7 @@ const config = {
 		}
 	}),
 	kit: {
+		router: false,
 		adapter: adapter(),
 		target: '#svelte',
 		vite: {
@@ -23,7 +24,6 @@ const config = {
 			},
 			resolve: {
 				alias: {
-					'$components': path.resolve('./src/components'),
 					'$scss': path.resolve('./src/scss')
 				}
 			}
