@@ -1,3 +1,9 @@
+@use 'sass:math';
+
+@function rem($pixels) {
+	@return math.div($pixels, 16) * 1rem;
+}
+
 :root {
 	--bg: hsl(0 0% 10%);
 	--border: hsl(0 0% 20%);
@@ -19,4 +25,108 @@ body {
 	font-family: 'Source Code Pro', 'Courier New', monospace;
 	font-weight: 500;
 	color: var(--text-secondary);
+}
+
+main {
+	max-width: rem(980);
+	margin: rem(100) auto;
+	width: 100%;
+	padding: 0 rem(50);
+}
+
+h1 {
+	font-size: rem(42);
+	color: var(--text-primary);
+	margin: 0 0 rem(100);
+	font-weight: 500;
+	span {
+		color: hsl(var(--accent));
+		text-shadow: 0 0 rem(15) hsl(var(--accent) / .5), 0 0 rem(5) hsl(var(--accent) / .2);
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&:not(:last-child) {
+		margin-bottom: rem(50);
+	}
+	li {
+		display: flex;
+		align-items: center;
+		position: relative;
+		&:first-child {
+			border-bottom: rem(1) solid var(--border);
+			padding-bottom: rem(12);
+		}
+		&:not(:first-child) {
+			padding: rem(12) 0 rem(12) rem(46);
+			&::before {
+				content: "";
+				position: absolute;
+				left: rem(22);
+				width: rem(1);
+				height: 100%;
+				background: var(--border);
+				top: 0;
+			}
+			&::after {
+				content: "";
+				background: var(--border);
+				position: absolute;
+				left: rem(22);
+				height: rem(1);
+				width: rem(12);
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		&:last-child::before {
+			height: 50%;
+		}
+	}
+	a {
+		display: block;
+		width: 100%;
+		&:hover {
+			h4 {
+				color: var(--text-primary);
+			}
+			p {
+				color: var(--text-secondary);
+			}
+		}
+	}
+	svg {
+		width: rem(24);
+		height: rem(24);
+		stroke: hsl(var(--accent));
+		filter: drop-shadow(0 0 rem(10) hsl(var(--accent) / .2)) drop-shadow(0 0 rem(5) hsl(var(--accent) / .5));
+		margin-right: rem(20);
+	}
+	h3 {
+		font-weight: 700;
+		flex: 1;
+		color: var(--text-primary);
+	}
+	p {
+		font-size: rem(14);
+		color: var(--text-tertiary);
+	}
+	h4 {
+		display: flex;
+		align-items: center;
+		gap: rem(12);
+		span {
+			font-size: rem(12);
+			color: hsl(var(--accent));
+			text-shadow: 0 0 rem(15) hsl(var(--accent) / .5), 0 0 rem(5) hsl(var(--accent) / .2);
+		}
+		small {
+			font-size: rem(12);
+			color: hsl(var(--yellow));
+			text-shadow: 0 0 rem(15) hsl(var(--yellow) / .5), 0 0 rem(5) hsl(var(--yellow) / .2);
+		}
+	}
 }
