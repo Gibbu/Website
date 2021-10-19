@@ -1,0 +1,22 @@
+:root {
+	--bg: hsl(0 0% 10%);
+	--border: hsl(0 0% 20%);
+	--text-primary: hsl(0 0% 100%);
+	--text-secondary: hsl(0 0% 75%);
+	--text-tertiary: hsl(0 0% 60%);
+	--accent: 159 79% 56%;
+	--yellow: 43 96% 56%;
+}
+
+::selection {
+	background: hsl(var(--accent));
+	color: #000;
+	text-shadow: 0 2px 5px hsl(0 0% 0% / .4);
+}
+
+body {
+	background: var(--bg);
+	font-family: 'Source Code Pro', 'Courier New', monospace;
+	font-weight: 500;
+	color: var(--text-secondary);
+}
