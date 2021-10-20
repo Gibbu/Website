@@ -1,10 +1,31 @@
 <script lang="ts">
   import './app.scss';
-
+  
   import themes from './data/themes';
   import projects from './data/projects';
   import links from './data/links';
+  
+  // VERY IMPORTANT EASTER EGG, no snitching >:(
+  let keys: string[] = [];
+  let showEasterEgg: boolean = false;
+  
+  const easteregg = (e: KeyboardEvent): void => {
+    keys = [...keys, e.key];
+    if (keys.length >= 11 && keys.join('').replace(/Arrow/g, '') === 'UpUpDownDownLeftRightLeftRightbaEnter') {
+      showEasterEgg = true;
+      window.scrollTo({
+        top: 0
+      })
+    }
+  }
 </script>
+
+<svelte:window on:keyup={easteregg} />
+
+{#if showEasterEgg}
+  <!-- No snitching >:( -->
+  <iframe width="980" height="551" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{/if}
 
 <template>
   <main>
@@ -62,7 +83,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
         </svg>
-        <h4>Links</h4>
+        <h3>Links</h3>
       </li>
       {#each links as link}
         <li>
