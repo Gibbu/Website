@@ -22,12 +22,11 @@
 
 <svelte:window on:keyup={easteregg} />
 
-{#if showEasterEgg}
-  <!-- No snitching >:( -->
-  <iframe width="980" height="551" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{/if}
-
 <template>
+  {#if showEasterEgg}
+    <!-- No snitching >:( -->
+    <iframe width="980" height="551" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  {/if}
   <main>
     <h1>Creator of the <span>BEST</span> Discord themes.</h1>
 
