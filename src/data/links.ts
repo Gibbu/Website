@@ -24,11 +24,6 @@ const links: Link[] = [
 		title: 'Twitch',
 		text: 'Watch me never.',
 		href: 'https://twitch.tv/Gibbu'
-	},
-	{
-		title: 'PayPal',
-		text: 'Donate to the Gibbu fundraiser.',
-		href: 'https://paypal.me/IanRGibson'
 	}
 ];
 
