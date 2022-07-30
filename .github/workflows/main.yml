@@ -1,19 +1,27 @@
-name: Build and Deploy
+name: "Build and Deploy"
+
 on: [push]
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  build-and-deloy:
+    runs-on: "ubuntu-latest"
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm install
-          npm run build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+      - name: "Checkout"
+        uses: "actions/checkout@v2.3.1"
+      - name: "Setup NodeJS"
+        uses: "actions/setup-node@v1"
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
+          node-version: 16
+      - name: "Install PNPM"
+        uses: "pnpm/action-setup@v2.1.0"
+        with:
+          version: 6.0.2
+      - name: "Run scripts"
+        run: |
+          pnpm install
+          pnpm build
+      - name: "Deploy"
+        uses: "peaceiris/actions-gh-pages@v3"
+        with:
+          publish_branch: "gh-pages"
+          publish_dir: "./dist"
