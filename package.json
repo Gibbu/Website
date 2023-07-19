@@ -14,6 +14,7 @@
 	"devDependencies": {
 		"@steeze-ui/heroicons": "^2.2.3",
 		"@steeze-ui/svelte-icon": "^1.5.0",
+		"@sveltejs/adapter-vercel": "^3.0.2",
 		"@sveltejs/kit": "^1.22.0",
 		"autoprefixer": "^10.4.14",
 		"clsx": "^1.2.1",
@@ -28,8 +29,5 @@
 		"typescript": "^5.1.6",
 		"vite": "^4.3.9"
 	},
-	"type": "module",
-	"dependencies": {
-		"@sveltejs/adapter-static": "^2.0.2"
-	}
+	"type": "module"
 }
