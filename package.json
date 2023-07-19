@@ -1,24 +1,33 @@
 {
-  "name": "website",
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.1",
-    "@tsconfig/svelte": "^2.0.1",
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.14",
-    "sass": "^1.54.0",
-    "svelte": "^3.49.0",
-    "svelte-check": "^2.8.0",
-    "svelte-preprocess": "^4.10.7",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.4",
-    "vite": "^2.9.14"
-  }
+	"name": "website",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev --port=3000",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@steeze-ui/heroicons": "^2.2.3",
+		"@steeze-ui/svelte-icon": "^1.5.0",
+		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/kit": "^1.22.0",
+		"autoprefixer": "^10.4.14",
+		"clsx": "^1.2.1",
+		"postcss": "^8.4.24",
+		"prettier": "^3.0.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^4.0.4",
+		"svelte-check": "^3.4.4",
+		"svelte-preprocess": "^5.0.4",
+		"tailwindcss": "^3.3.2",
+		"tslib": "^2.6.0",
+		"typescript": "^5.1.6",
+		"vite": "^4.3.9"
+	},
+	"type": "module"
 }
