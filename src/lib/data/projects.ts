@@ -7,9 +7,14 @@ interface Project {
 
 export const projects: Project[] = [
 	{
+		name: 'SVoast',
+		description: 'A simple toast component for Svelte',
+		href: 'https://svoast.vercel.app'
+	},
+	{
 		name: 'SVooltip',
 		description: 'A basic Svelte tooltip directive.',
-		href: 'https://github.com/Gibbu/svooltip'
+		href: 'https://svooltip.vercel.app'
 	},
 	{
 		name: 'BetterDiscord Theme Editor',

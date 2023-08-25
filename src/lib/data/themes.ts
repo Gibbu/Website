@@ -1,4 +1,4 @@
-export interface Theme {
+interface Theme {
 	name: string;
 	description: string;
 	bd_download: number;
@@ -14,8 +14,7 @@ export const themes: Theme[] = [
 		images: [
 			'https://camo.githubusercontent.com/1acc36365992ad4119ed09f3db87660622866bbcafafe58be7a46c5933e3cb84/68747470733a2f2f692e696d6775722e636f6d2f576173676546792e706e67',
 			'https://camo.githubusercontent.com/4fd8fb24c67f884b6c510d2090029ab0ce44a626c249329abb2fd27e08c9b84b/68747470733a2f2f692e696d6775722e636f6d2f33754c3879326d2e706e67'
-		],
-		new: true
+		]
 	},
 	{
 		name: 'SoftX',
