@@ -7,6 +7,11 @@ interface Project {
 
 export const projects: Project[] = [
 	{
+		name: 'Lithesome',
+		description: 'An unstyled component library for Svelte 5.',
+		href: 'https://lithesome.dev'
+	},
+	{
 		name: 'SVoast',
 		description: 'A simple toast component for Svelte',
 		href: 'https://svoast.vercel.app'
