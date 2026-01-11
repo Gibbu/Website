@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { themes } from '$lib/data/themes';
 	import { projects } from '$lib/data/projects';
-	import { GithubIcon, SunIcon, MoonIcon, MailIcon, MapPinHouseIcon } from '@lucide/svelte';
+	import { GithubIcon, SunIcon, MoonIcon, MailIcon, RssIcon } from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { flip } from 'svelte/animate';
 	import { fly } from 'svelte/transition';
@@ -82,10 +82,10 @@
 			<span>Toggle Theme</span>
 		</button>
 
-		<section id="location" class="block btn static">
-			<MapPinHouseIcon />
-			<span>Victoria, Australia</span>
-		</section>
+		<a id="blog" href="/blog" class="block btn">
+			<RssIcon />
+			<span>Blog</span>
+		</a>
 
 		<section id="themes" class="block">
 			<h3>Discord Themes</h3>
@@ -187,7 +187,7 @@
 			grid-column: 5 / 7;
 			grid-row: 7 / 9;
 		}
-		&#location {
+		&#blog {
 			grid-column: 5 / 7;
 			grid-row: 9 / 11;
 		}
@@ -196,6 +196,7 @@
 			grid-row: 3 / 11;
 		}
 	}
+
 	.btn {
 		align-items: center;
 		justify-content: center;
